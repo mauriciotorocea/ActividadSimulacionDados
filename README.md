@@ -6,7 +6,8 @@ Descripción
 - El presente trabajo propone integrar herramientas de Inteligencia Artificial (IA) generativa en las fases pictórica y simbólica en la enseñanza de los contenidos del eje Datos y Probabilidades de 5° y 6° básico. Se diseñó una actividad, anclada en el enfoque Concreto-Pictórico-simbólico (COPISI), que incorpora IA generativa para simular repeticiones experimentales y visualizar datos mediante gráficos de barras, reduciendo el tiempo de las fases concreta y pictórica, para favorecer la comprensión de los conceptos abstractos de frecuencia relativa, probabilidad teórica, variabilidad y tendencia. La actividad diseñada será implementada en dos cursos de 6° en distintos colegios de Chile.
 
 Documentación
-- Guía técnica: [ver online](https://mauriciotorocea.github.io/ActividadSimulacionDados/GuiaTecnica.html), descargar pdf.
+- Guía técnica: [ver versión html](https://mauriciotorocea.github.io/ActividadSimulacionDados/GuiaTecnica.html), [descargar pdf](https://raw.githubusercontent.com/mauriciotorocea/ActividadSimulacionDados/main/GuiaTecnica.pdf
+).
 
 
 Licencia
