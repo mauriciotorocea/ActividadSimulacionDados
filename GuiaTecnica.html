@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es" xml:lang="es">
 
 <head>
 
@@ -12,7 +12,8 @@
 
 
 
-<title>GuiaTecnica.knit</title>
+<title>Guía Técnica IA - Repetición de experimentos con estudiantes de
+6° básico e Inteligencia Artificial Generativa</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -84,6 +85,29 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+
+div.csl-bib-body { }
+div.csl-entry {
+clear: both;
+margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+margin-left:2em;
+text-indent:-2em;
+}
+div.csl-left-margin {
+min-width:2em;
+float:left;
+}
+div.csl-right-inline {
+margin-left:2em;
+padding-left:1em;
+}
+div.csl-indent {
+margin-left: 2em;
+}
+</style>
 
 <style type="text/css">
 @font-face {
@@ -123,6 +147,8 @@ background: #fdfcf8;
 color: #222;
 margin: 0;
 padding: 0;
+
+
 
 padding-top: 150px; 
 line-height: 1.6;
@@ -427,6 +453,11 @@ margin-bottom: 1rem;
 }
 
 
+.print-only-list {
+display: none;
+}
+
+
 
 
 .prompt-container {
@@ -577,6 +608,73 @@ cursor: pointer;
 }
 
 
+div.references, div.csl-bib-body {
+
+padding-left: 0;
+margin-left: 0;
+}
+
+div.references p, div.csl-entry {
+
+
+
+list-style: none;
+
+margin-bottom: 1.2em;
+
+padding-left: 3em; 
+text-indent: -2em; 
+}
+
+div.references p::before, div.csl-entry::before {
+content: "📚 "; 
+color: var(--primary-color); 
+font-weight: bold;
+padding-right: 0.5em; 
+}
+
+.metadata-footer {
+
+text-align: center; 
+margin-top: 60px; 
+font-family: "Merriweather", serif; font-size: 0.9em;
+color: var(--text-color);
+
+opacity: 0.7;
+}
+
+
+#citation-popup {
+display: none; 
+position: absolute; 
+z-index: 1000; 
+
+background-color: #ffffff;
+border: 1px solid var(--secondary-color); 
+border-left: 5px solid var(--primary-color); 
+box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+border-radius: 4px;
+
+width: 350px; 
+padding: 15px;
+font-family: "Merriweather", serif;
+font-size: 0.9em;
+line-height: 1.5;
+color: var(--text-color);
+}
+
+#citation-popup .csl-entry {
+margin: 0;
+padding: 0;
+
+text-indent: 0; }
+
+#citation-popup .csl-entry::before {
+content: "📚 ";
+font-size: 0.8em;
+}
+
+
 
 @media print {
 
@@ -619,6 +717,45 @@ break-before: avoid;
 img {
 break-inside: avoid;
 }
+
+
+.copy-button {
+display: none !important;
+}
+
+
+.prompt-container {
+
+padding-bottom: 15px !important; }
+
+
+.vembedr, .vembedr-row,
+.video-container { display: none !important; }
+
+.print-only-list {
+display: block !important;
+
+border: 1px solid #ccc;
+background-color: #f9f9f9;
+padding: 15px;
+margin: 20px 0;
+border-radius: 5px;
+font-family: "Merriweather", serif;
+font-size: 0.9em;
+}
+
+.print-only-list a {
+text-decoration: underline;
+color: var(--primary-color);
+}
+.print-only-list ul {
+padding-left: 20px;
+margin: 0;
+}
+.print-only-list li {
+margin-bottom: 10px;
+line-height: 1.4;
+}
 }
 
 @page {
@@ -650,7 +787,7 @@ border-top: 1px solid var(--light-gray); padding-top: 5px;
 
 <h1 class="title toc-ignore"><div class="line-block">Repetición de
 experimentos con estudiantes de 6° básico e Inteligencia Artificial
-Generativa: Diseño de situación de aprendizaje<br />
+Generativa<br />
 Guía Técnica</div></h1>
 <h4 class="author"><div class="line-block"><br />
 <br />
@@ -659,7 +796,7 @@ Guía Técnica</div></h1>
 <br />
 <br />
 Mauricio Toro, Isidora González y Javiera Castillo</div></h4>
-<h4 class="date">Noviembre, 2025</h4>
+<h4 class="date">Diciembre, 2025</h4>
 
 
 
@@ -673,8 +810,10 @@ Python.</p>
 <blockquote>
 <p><strong>MA06 OA 23</strong> - Conjeturar acerca de la tendencia de
 resultados obtenidos en repeticiones de un mismo experimento con dados,
-monedas u otros, de manera manual y/o usando software educativo.</p>
+monedas u otros, de manera manual y/o usando software educativo <span class="citation">(<a href="#ref-mineduc_2024">Ministerio de Educación de
+Chile, 2024</a>)</span>.</p>
 </blockquote>
+<hr />
 </div>
 <div id="conceptos-importantes" class="section level1">
 <h1>Conceptos importantes</h1>
@@ -686,7 +825,9 @@ comprender y generar lenguaje humano de manera coherente. Estos modelos
 pueden responder preguntas, redactar textos, traducir, resumir y
 realizar muchas otras tareas lingüísticas gracias a patrones aprendidos
 durante su entrenamiento. Para profundizar en cómo funcionan y qué
-pueden hacer, puedes consultar los siguientes videos:</p>
+pueden hacer, puedes lee más en <span class="citation">Stanford
+University (<a href="#ref-llm_stanford">2024a</a>)</span> o consultar
+los siguientes videos:</p>
 <div class="vembedr-row">
 
   <div class="vembedr">
@@ -704,6 +845,19 @@ pueden hacer, puedes consultar los siguientes videos:</p>
   </div>
 
 </div>
+<div class="print-only-list">
+  <h4>Referencias de Video:</h4>
+  <ul>
+    <li>
+      <strong>Video 1:</strong> Explicación básica sobre los LLM 
+      [<a href="https://youtu.be/MR7Dkyc7WSM">https://youtu.be/MR7Dkyc7WSM</a>]
+    </li>
+    <li>
+      <strong>Video 2:</strong> Explicación más profunda 
+      [<a href="https://youtu.be/Sz4qacFBHLk">https://youtu.be/Sz4qacFBHLk</a>]
+    </li>
+  </ul>
+</div>
 </div>
 <div id="palabras-clave" class="section level2">
 <h2>Palabras clave</h2>
@@ -711,62 +865,73 @@ pueden hacer, puedes consultar los siguientes videos:</p>
 <li><p><strong>Modelo de lenguaje (LLM)</strong> 🧠<br />
 Sistema entrenado para predecir la siguiente unidad de texto (token)
 dentro de una secuencia. Gracias a su escala, datos y arquitectura
-—generalmente basada en transformers— puede comprender instrucciones,
-razonar sobre texto y generar respuestas coherentes.</p></li>
+—generalmente basada en <em>transformers</em>— puede comprender
+instrucciones, razonar sobre texto y generar respuestas
+coherentes.</p></li>
 <li><p><strong>IA generativa</strong> 🤖<br />
 Conjunto de modelos capaces de producir contenido nuevo —como texto,
 imágenes o código— aprendiendo la distribución de los datos con los que
-fueron entrenados.</p></li>
+fueron entrenados <span class="citation">(lee más en <a href="#ref-iagenerativa_harvard">Harvard University Information
+Technology, s. f.</a>)</span>.</p></li>
 <li><p><strong>Prompt</strong> ✍️<br />
 Entrada que el usuario entrega al modelo para indicar qué desea obtener.
 Puede incluir instrucciones, contexto, formato esperado e incluso
 ejemplos. La forma en que se redacta influye directamente en la calidad
-del resultado.</p></li>
+del resultado <span class="citation">(lee más en <a href="#ref-prompt_mit">MIT Sloan Teaching &amp; Learning Technologies,
+s. f.-a</a>)</span>.</p></li>
 <li><p><strong>Ingeniería de prompts (prompt engineering)</strong>
 🛠️<br />
 Conjunto de estrategias para diseñar prompts efectivos, con el fin de
-guiar al modelo hacia respuestas más útiles, precisas y
-consistentes.</p></li>
+guiar al modelo hacia respuestas más útiles, precisas y consistentes
+<span class="citation">(lee más en <a href="#ref-ingprompts_stanford">Stanford University, 2024b</a>; <a href="#ref-ingprompts_texas">University of Texas at Austin,
+2025</a>)</span>.</p></li>
 <li><p><strong>Token</strong> 🔤<br />
 Unidad mínima de texto procesada por un modelo de lenguaje. Puede ser
 una palabra, parte de una palabra o un símbolo. La longitud de una
 interacción se mide en tokens, lo que afecta costos y límites de
-contexto.</p></li>
+contexto <span class="citation">(lee más en <a href="#ref-token_openai">OpenAI, s. f.</a>)</span>.</p></li>
 <li><p><strong>Ventana de contexto (contexto)</strong> 📏<br />
 Cantidad de tokens que el modelo puede considerar simultáneamente para
 generar una respuesta. Un mayor contexto permite mantener coherencia en
-diálogos largos o trabajar con textos extensos.</p></li>
+diálogos largos o trabajar con textos extensos <span class="citation">(lee más en <a href="#ref-ventana_mit">MIT Sloan
+Teaching &amp; Learning Technologies, s. f.-b</a>)</span>.</p></li>
 <li><p><strong>Alucinación</strong> ⚠️<br />
 Situación en la que el modelo produce información incorrecta,
 inexistente o inventada, aunque suene plausible. Es un comportamiento
 esperado en modelos generativos y requiere supervisión crítica del
-usuario.</p></li>
-<li><p><strong>Inferencia</strong> ⚡<br />
-Proceso mediante el cual un modelo entrenado genera una respuesta a
-partir de un prompt. No implica volver a entrenar el modelo, sino usar
-su conocimiento ya adquirido.</p></li>
+usuario <span class="citation">(lee más en <a href="#ref-alucinacion_mit">MIT Sloan Teaching &amp; Learning
+Technologies, s. f.-c</a>; <a href="#ref-alucinacion_illinois">University of Illinois at
+Urbana-Champaign, 2025</a>)</span>.</p></li>
 <li><p><strong>Python</strong> 🐍<br />
 Lenguaje de programación ampliamente utilizado en ciencia, educación y
 desarrollo de software. Es popular por su sintaxis clara, su
 versatilidad y la gran cantidad de bibliotecas disponibles para tareas
-de cálculo, análisis de datos y simulaciones.</p></li>
+de cálculo, análisis de datos y simulaciones <span class="citation">(lee
+más en <a href="#ref-python_blurb">Python Software Foundation,
+s. f.</a>)</span>.</p></li>
 <li><p><strong>Simulación computacional</strong> 💻<br />
 Proceso de modelar y reproducir fenómenos del mundo real mediante
-algoritmos y programas de computadora.</p></li>
+algoritmos y programas de computadora <span class="citation">(lee más en
+<a href="#ref-simul_purdue">Purdue University,
+s. f.</a>)</span>.</p></li>
 <li><p><strong>Semilla (seed)</strong> 🎲<br />
 Valor que permite “congelar” la aleatoriedad de una simulación, de modo
 que cada vez que se ejecute se obtengan los mismos resultados. En
 Python, el comando para fijar una semilla es
-<code>NumPy.random.seed(valor)</code>.</p></li>
+<code>numpy.random.seed(valor)</code> <span class="citation">(lee más en
+<a href="#ref-numpy-seed-doc">NumPy Development Team,
+s. f.</a>)</span>.</p></li>
 <li><p><strong>Modelos multimodales</strong> 🌐<br />
 Modelos de IA que pueden procesar y generar distintos tipos de datos
 —texto, imágenes, audio o video— e incluso generar código, combinando
-información de varias fuentes para tareas complejas.</p></li>
+información de varias fuentes para tareas complejas <span class="citation">(lee más en <a href="#ref-multimod_carlow">Carlow
+University, 2024</a>)</span>.</p></li>
 <li><p><strong>Markdown</strong> 🧾<br />
 Es un sistema sencillo para escribir texto que luego puede mostrarse con
 formato —títulos, listas, negritas o tablas— usando solo caracteres
 comunes. Muchos visores de chats de IA generativas interpretan Markdown
-para dar estilo y estructura a sus respuestas.</p></li>
+para dar estilo y estructura a sus respuestas <span class="citation">(lee más en <a href="#ref-markdown_daring">Gruber,
+John, s. f.</a>)</span>.</p></li>
 </ul>
 <hr />
 </div>
@@ -989,7 +1154,7 @@ práctica en aula, este detalle es irrelevante.</li>
 <li><strong>Fallo de Generación de Gráficos:</strong> La IA dice “Aquí
 está el gráfico” pero no aparece nada.
 <ul>
-<li>Lo más simple es volver a ejecutar el prompt.</li>
+<li>Lo más fácil es volver a ejecutar el prompt.</li>
 </ul></li>
 </ul>
 </div>
@@ -1018,8 +1183,8 @@ renderizado de tablas o fórmulas.</li>
 <ul>
 <li>Es crucial el <strong>uso ético de las herramientas de IA
 generativa</strong>, resguardando la <strong>privacidad</strong> y
-evitando sesgos (Miao &amp; Holmes, 2024; Ministerio de Educación,
-Centro de Innovación, 2025).
+evitando sesgos <span class="citation">(<a href="#ref-miao_holmes_2024">Miao &amp; Holmes, 2024</a>; <a href="#ref-mineduc_2025">Ministerio de Educación, Centro de Innovación,
+2025</a>)</span>.
 <ul>
 <li>La actividad diseñada es segura. No requiere suministrar a la IA
 información personal.</li>
@@ -1038,18 +1203,89 @@ incluyen literatura sobre probabilidad y estadística.</li>
 </div>
 <div id="lecturas-de-interés" class="section level1">
 <h1>Lecturas de interés</h1>
-<ul>
-<li><p>📚 Google Cloud. (s.f.). <em>What is prompt engineering?</em>
-Recuperado el 31 de agosto de 2025, de <a href="https://cloud.google.com/discover/what-is-prompt-engineering" class="uri">https://cloud.google.com/discover/what-is-prompt-engineering</a></p></li>
-<li><p>📚 Miao, F., &amp; Holmes, W. (2024). <em>Guía para el uso de IA
-generativa en educación e investigación</em>. UNESCO. <a href="https://unesdoc.unesco.org/ark:/48223/pf0000386696" class="uri">https://unesdoc.unesco.org/ark:/48223/pf0000386696</a></p></li>
-<li><p>📚 Ministerio de Educación, Centro de Innovación. (2025).
-<em>PotencIA el aprendizaje: Preguntas para la reflexión y práctica de
-la Inteligencia Artificial generativa en contextos educativos</em>.
-Ciudadanía Digital. <a href="https://ciudadaniadigital.mineduc.cl/potencia-el-aprendizaje-ia-en-educacion/" class="uri">https://ciudadaniadigital.mineduc.cl/potencia-el-aprendizaje-ia-en-educacion/</a></p></li>
-<li><p>📚 Ministerio de Educación de Chile. (2024). <em>Bases
-Curriculares Primero a Sexto Básico</em>. MINEDUC.</p></li>
-</ul>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0" line-spacing="2">
+<div id="ref-multimod_carlow" class="csl-entry">
+Carlow University. (2024). <em>What Are Large Language Models and
+Multimodal Models? - AI and Higher Education - CTRL at Carlow
+University</em>. <a href="https://ctrl.carlow.edu/ai/whatare">https://ctrl.carlow.edu/ai/whatare</a>
+</div>
+<div id="ref-markdown_daring" class="csl-entry">
+Gruber, John. (s. f.). <em>Markdown Syntax Documentation</em>.
+Recuperado 1 de diciembre de 2025, de <a href="https://daringfireball.net/projects/markdown/syntax">https://daringfireball.net/projects/markdown/syntax</a>
+</div>
+<div id="ref-iagenerativa_harvard" class="csl-entry">
+Harvard University Information Technology. (s. f.). <em>Generative
+Artificial Intelligence (AI)</em>. Recuperado 1 de diciembre de 2025, de
+<a href="https://www.huit.harvard.edu/ai">https://www.huit.harvard.edu/ai</a>
+</div>
+<div id="ref-miao_holmes_2024" class="csl-entry">
+Miao, F., &amp; Holmes, W. (2024). <em>Guía para el uso de IA generativa
+en educación e investigación</em>. UNESCO. <a href="https://unesdoc.unesco.org/ark:/48223/pf0000386696">https://unesdoc.unesco.org/ark:/48223/pf0000386696</a>
+</div>
+<div id="ref-mineduc_2025" class="csl-entry">
+Ministerio de Educación, Centro de Innovación. (2025). <em>PotencIA el
+aprendizaje: Preguntas para la reflexión y práctica de la Inteligencia
+Artificial generativa en contextos educativos</em>. Ciudadanía Digital.
+<a href="https://ciudadaniadigital.mineduc.cl/potencia-el-aprendizaje-ia-en-educacion/">https://ciudadaniadigital.mineduc.cl/potencia-el-aprendizaje-ia-en-educacion/</a>
+</div>
+<div id="ref-mineduc_2024" class="csl-entry">
+Ministerio de Educación de Chile. (2024). <em>Bases Curriculares Primero
+a Sexto Básico</em>. MINEDUC.
+</div>
+<div id="ref-prompt_mit" class="csl-entry">
+MIT Sloan Teaching &amp; Learning Technologies. (s. f.-a). <em>Effective
+Prompts for AI: The Essentials</em>. Recuperado 1 de diciembre de 2025,
+de <a href="https://mitsloanedtech.mit.edu/ai/basics/effective-prompts/">https://mitsloanedtech.mit.edu/ai/basics/effective-prompts/</a>
+</div>
+<div id="ref-ventana_mit" class="csl-entry">
+MIT Sloan Teaching &amp; Learning Technologies. (s. f.-b). <em>Glossary
+of Terms: Generative AI Basics</em>. Recuperado 1 de diciembre de 2025,
+de <a href="http://mitsloanedtech.mit.edu/ai/basics/glossary/#Context_window">http://mitsloanedtech.mit.edu/ai/basics/glossary/#Context_window</a>
+</div>
+<div id="ref-alucinacion_mit" class="csl-entry">
+MIT Sloan Teaching &amp; Learning Technologies. (s. f.-c). <em>When AI
+Gets It Wrong: Addressing AI Hallucinations and Bias</em>. Recuperado 1
+de diciembre de 2025, de <a href="https://mitsloanedtech.mit.edu/ai/basics/addressing-ai-hallucinations-and-bias/">https://mitsloanedtech.mit.edu/ai/basics/addressing-ai-hallucinations-and-bias/</a>
+</div>
+<div id="ref-numpy-seed-doc" class="csl-entry">
+NumPy Development Team. (s. f.). <em>NumPy Documentation —
+numpy.random.seed</em>. <a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.seed.html" class="uri">https://numpy.org/doc/stable/reference/random/generated/numpy.random.seed.html</a>.
+</div>
+<div id="ref-token_openai" class="csl-entry">
+OpenAI. (s. f.). <em>What are tokens and how to count them?</em>
+Recuperado 1 de diciembre de 2025, de <a href="https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them">https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them</a>
+</div>
+<div id="ref-simul_purdue" class="csl-entry">
+Purdue University. (s. f.). <em>Week 13 - Simulation</em>. Recuperado 1
+de diciembre de 2025, de <a href="https://engineering.purdue.edu/~engelb/abe565/week13.htm">https://engineering.purdue.edu/~engelb/abe565/week13.htm</a>
+</div>
+<div id="ref-python_blurb" class="csl-entry">
+Python Software Foundation. (s. f.). <em>What is Python? Executive
+Summary</em>. Recuperado 1 de diciembre de 2025, de <a href="https://www.python.org/doc/essays/blurb/">https://www.python.org/doc/essays/blurb/</a>
+</div>
+<div id="ref-llm_stanford" class="csl-entry">
+Stanford University. (2024a). <em>AI Demystified: Introduction to large
+language models</em>. <a href="https://uit.stanford.edu/service/techtraining/ai-demystified/llm">https://uit.stanford.edu/service/techtraining/ai-demystified/llm</a>
+</div>
+<div id="ref-ingprompts_stanford" class="csl-entry">
+Stanford University. (2024b). <em>AI Demystified: What is Prompt
+Engineering?</em> <a href="https://uit.stanford.edu/service/techtraining/ai-demystified/prompt-engineering">https://uit.stanford.edu/service/techtraining/ai-demystified/prompt-engineering</a>
+</div>
+<div id="ref-alucinacion_illinois" class="csl-entry">
+University of Illinois at Urbana-Champaign. (2025). <em>Hallucinations -
+Introduction to Generative AI - LibGuides at University of Illinois at
+Urbana-Champaign</em>. <a href="https://guides.library.illinois.edu/generativeAI/hallucinations">https://guides.library.illinois.edu/generativeAI/hallucinations</a>
+</div>
+<div id="ref-ingprompts_texas" class="csl-entry">
+University of Texas at Austin. (2025). <em>Prompt Engineering -
+Artificial Intelligence (AI) - LibGuides at University of Texas at
+Austin</em>. <a href="https://guides.lib.utexas.edu/AI/prompt-engineering">https://guides.lib.utexas.edu/AI/prompt-engineering</a>
+</div>
+</div>
+<div class="metadata-footer">
+<p>Mauricio Toro, Isidora González y Javiera Castillo <br> Diciembre,
+2025</p>
+</div>
 <!-- Este script es necesario para generar el diagrama del proceso de validación. NO BORRAR!!!!  -->
 <script>(function(JM,Ag){typeof exports=="object"&&typeof module<"u"?module.exports=Ag():typeof define=="function"&&define.amd?define(Ag):(JM=typeof globalThis<"u"?globalThis:JM||self,JM.mermaid=Ag())})(this,function(){var FWe,RWe;"use strict";function JM(i){for(var s=[],u=1;u<arguments.length;u++)s[u-1]=arguments[u];var d=Array.from(typeof i=="string"?[i]:i);d[d.length-1]=d[d.length-1].replace(/\r?\n([\t ]*)$/,"");var p=d.reduce(function(y,T){var _=T.match(/\n([\t ]+|(?!\s).)/g);return _?y.concat(_.map(function(A){var P,R;return(R=(P=A.match(/[\t ]/g))===null||P===void 0?void 0:P.length)!==null&&R!==void 0?R:0})):y},[]);if(p.length){var v=new RegExp(`
 [	 ]{`+Math.min.apply(Math,p)+"}","g");d=d.map(function(y){return y.replace(v,`
@@ -3189,6 +3425,79 @@ function copyPrompt(elementId, buttonElement) {
             closePdfModal();
         }
     }
+</script>
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // 1. Crear el elemento div para el popup y añadirlo al cuerpo del documento
+    const popup = document.createElement('div');
+    popup.id = 'citation-popup';
+    document.body.appendChild(popup);
+
+    // 2. Seleccionar todos los enlaces de citas generados por Pandoc
+    // Buscamos enlaces que empiecen con #ref-
+    const citations = document.querySelectorAll('a[href^="#ref-"]');
+
+    citations.forEach(cit => {
+        cit.addEventListener('click', function(e) {
+            e.preventDefault(); // EVITA que salte al final de la página
+            e.stopPropagation(); // Evita conflictos con otros clics
+
+            // Obtener el ID de la referencia (quitando el #)
+            const refId = this.getAttribute('href').substring(1);
+            
+            // Buscar el contenido original en la bibliografía
+            const originalRef = document.getElementById(refId);
+
+            if (originalRef) {
+                // Copiar el contenido al popup
+                popup.innerHTML = originalRef.innerHTML;
+                
+                // Mostrar el popup
+                popup.style.display = 'block';
+
+                // --- POSICIONAMIENTO INTELIGENTE ---
+                const rect = this.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+                // Posicionar justo debajo del enlace clicado
+                popup.style.top = (rect.bottom + scrollTop + 10) + 'px';
+                
+                // Intentar centrarlo o alinearlo a la izquierda, ajustando si se sale de pantalla
+                let leftPos = rect.left + scrollLeft;
+                
+                // Si el popup se sale por la derecha de la pantalla, ajustarlo
+                if (leftPos + 350 > window.innerWidth) {
+                    leftPos = window.innerWidth - 370; // 350 ancho + 20 margen
+                }
+                
+                popup.style.left = leftPos + 'px';
+            }
+        });
+    });
+
+    // 3. Cerrar el popup al hacer click en cualquier otro lado
+    document.addEventListener('click', function(e) {
+        // Si el click NO fue en el popup ni en una cita
+        if (!e.target.closest('#citation-popup') && !e.target.closest('a[href^="#ref-"]')) {
+            popup.style.display = 'none';
+        }
+    });
+    
+    // 4. (Opcional) Cerrar al pulsar la tecla Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape") {
+            popup.style.display = 'none';
+        }
+    });
+});
 </script>
 
 
