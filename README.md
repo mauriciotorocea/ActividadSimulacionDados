@@ -1,4 +1,5 @@
-# 🎲  Repetición de experimentos con estudiantes de 6° básico e Inteligencia Artificial Generativa
+# Explorando el Azar y la Probabilidad con Dados e Inteligencia Artificial
+🎲  Repetición de experimentos con estudiantes de 6° Básico e Inteligencia Artificial Generativa
 
 
 ## 📘 Descripción
@@ -19,19 +20,23 @@ En este repositorio compartimos la documentación de la situación de aprendizaj
 
 ## 📄 Documentación
 
-- 📘 Guía para estudiantes (versión DD/MM/AAAA):
-  - [descargar .docx]().
-- 👩‍🏫 Guía para el docente (versión DD/MM/AAAA):
-  - [descargar .docx]().
+- 📘 Guía para estudiantes (versión 26/11/2025):
+  - [descargar .docx](https://github.com/mauriciotorocea/ActividadSimulacionDados/raw/refs/heads/main/Gu%C3%ADa%206tos%20b%C3%A1sicos.docx).
+- 👩‍🏫 Guía para el docente (versión 26/11/2025):
+  - [descargar .docx](https://github.com/mauriciotorocea/ActividadSimulacionDados/raw/refs/heads/main/Gu%C3%ADa%20para%20el%20docente.docx).
 -  🛠️ Guía técnica (versión 01/12/2025):
-  - [ver versión html](https://mauriciotorocea.github.io/ActividadSimulacionDados/GuiaTecnica.html)
-  - [descargar pdf](https://raw.githubusercontent.com/mauriciotorocea/ActividadSimulacionDados/main/GuiaTecnica.pdf).
+   - [ver versión html](https://mauriciotorocea.github.io/ActividadSimulacionDados/GuiaTecnica.html)
+   - [descargar pdf](https://raw.githubusercontent.com/mauriciotorocea/ActividadSimulacionDados/main/GuiaTecnica.pdf).
+- 🗣️ Presentación en la I Jornada Nacional de Educación Estadística (JNEDES) (16-12-2025):
+  - [ver presentación (html)](https://mauriciotorocea.github.io/ActividadSimulacionDados/Presentacion.html)
+  
+    
 
 ## 👥 Sobre los autores
 
-- **Mauricio Toro-Cea**: estadístico, blablablá.
-- **Isidora González**:
-- **Javiera Castillo**:
+- **Mauricio Toro-Cea**: PhD en Estadística, Pontificia Universidad Católica de Chile (PUC).
+- **Isidora González**: Profesora de Educación General Básica mención Matemática, PUC.
+- **Javiera Castillo**: Profesora de Educación General Básica mención Matemática, PUC.
 
 
 ## 📜 Licencia
